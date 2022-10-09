@@ -31,7 +31,7 @@ int my_printf(char *format_string, char *param)
 			{
 				if (format_string[j] == 'k')
 				{
-					length = j;
+					length = j - i;
 				}
 				else if (!isdigit(format_string[j]))
 				{
@@ -45,10 +45,10 @@ int my_printf(char *format_string, char *param)
 			else
 			{
 				char number[length + 1];
-				memcpy(number, &format_string[i], length + 1);
+				memcpy(number, &format_string[i + 2], length);
 				number[length] = '\0';
 				int num = atoi(number);
-				for (int j = 0; j < strlen(param) || j < num; j++)
+				for (int j = 0; j < strlen(param) && j < num; j++)
 				{
 					char value = param[j];
 					if (islower(value))
@@ -61,7 +61,7 @@ int my_printf(char *format_string, char *param)
 					}
 					putchar(value);
 				}
-				i = length;
+				i += length;
 			}
 		}
 		else

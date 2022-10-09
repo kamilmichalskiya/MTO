@@ -1,8 +1,8 @@
 totafsdfsf #.2k fdsfsdf
 teSt
-totafsd#k fdsfsdf fdfjs
+totafsd#.k fdsfsdf fdfjs
 tesT2
-jfldjfldk # wynik
+jfldjfldk #. wynik
 test3
 fjdfsfds # k alal
 tEst4
@@ -10,7 +10,7 @@ djfjkldsjf #.8k jjjjjj fsfjdljfdlsj flj ldfj
 test5
 gjjkdsljflds #k jdlkfjdslf
 test6
-fjdslkfjdl #k tttttt
+fjdslkfjdl tttttt #
 test7
 fjdlsjfkl #k oooolll
 test8
