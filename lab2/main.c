@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 int my_printf(char *format_string, char *param)
 {
@@ -26,7 +27,7 @@ int my_printf(char *format_string, char *param)
 		else if ((format_string[i] == '#') && (format_string[i + 1] == '.'))
 		{
 			int length = 0;
-			for (int j = i; j < strlen(format_string); ++j)
+			for (int j = i + 2; j < strlen(format_string); ++j)
 			{
 				if (format_string[j] == 'k')
 				{
@@ -43,7 +44,24 @@ int my_printf(char *format_string, char *param)
 			}
 			else
 			{
-				// wyświetl określoną liczbę znaków
+				char number[length + 1];
+				memcpy(number, &format_string[i], length + 1);
+				number[length] = '\0';
+				int num = atoi(number);
+				for (int j = 0; j < strlen(param) || j < num; j++)
+				{
+					char value = param[j];
+					if (islower(value))
+					{
+						value = toupper(value);
+					}
+					else if (isupper(value))
+					{
+						value = tolower(value);
+					}
+					putchar(value);
+				}
+				i = length;
 			}
 		}
 		else
