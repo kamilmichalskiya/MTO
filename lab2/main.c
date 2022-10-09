@@ -3,6 +3,22 @@
 #include <ctype.h>
 #include <stdlib.h>
 
+char swap_case_sesnsitivity(char ch)
+{
+	if (islower(ch))
+	{
+		return toupper(ch);
+	}
+	else if (isupper(ch))
+	{
+		return tolower(ch);
+	}
+	else
+	{
+		return ch;
+	}
+}
+
 int my_printf(char *format_string, char *param)
 {
 	for (int i = 0; i < strlen(format_string); i++)
@@ -12,16 +28,7 @@ int my_printf(char *format_string, char *param)
 			i++;
 			for (int j = 0; j < strlen(param); j++)
 			{
-				char value = param[j];
-				if (islower(value))
-				{
-					value = toupper(value);
-				}
-				else if (isupper(value))
-				{
-					value = tolower(value);
-				}
-				putchar(value);
+				putchar(swap_case_sesnsitivity(param[j]));
 			}
 		}
 		else if ((format_string[i] == '#') && (format_string[i + 1] == '.'))
@@ -50,16 +57,7 @@ int my_printf(char *format_string, char *param)
 				int num = atoi(number);
 				for (int j = 0; j < strlen(param) && j < num; j++)
 				{
-					char value = param[j];
-					if (islower(value))
-					{
-						value = toupper(value);
-					}
-					else if (isupper(value))
-					{
-						value = tolower(value);
-					}
-					putchar(value);
+					putchar(swap_case_sesnsitivity(param[j]));
 				}
 				i += length;
 			}
