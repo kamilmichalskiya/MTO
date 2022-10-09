@@ -29,7 +29,7 @@ int my_printf(char *format_string, char *param)
 			int length = 0;
 			for (int j = i + 2; j < strlen(format_string); ++j)
 			{
-				if (format_string[j] == 'k')
+				if (j > i + 2 && format_string[j] == 'k')
 				{
 					length = j - i;
 				}
