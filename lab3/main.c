@@ -88,13 +88,14 @@ int my_printf(char *format_string, char *param)
 				memcpy(number_in_chars, &format_string[i], number_of_chars);
 				number_in_chars[number_of_chars] = '\0';
 				int num = atoi(number_in_chars);
-				for (int j = 0; j < strlen(param); j++)
-				{
-					putchar(swap_case_sesnsitivity(param[j]));
-				}
 				for (int j = strlen(param); j < num; j++)
 				{
 					putchar(' ');
+				}
+
+				for (int j = 0; j < strlen(param); j++)
+				{
+					putchar(swap_case_sesnsitivity(param[j]));
 				}
 
 				i += number_of_chars;
