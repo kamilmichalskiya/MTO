@@ -96,7 +96,7 @@ int my_printf(char *format_string, char *param)
 				{
 					putchar(' ');
 				}
-				
+
 				i += number_of_chars;
 			}
 		}
