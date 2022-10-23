@@ -92,7 +92,6 @@ int my_printf(char *format_string, char *param)
 				{
 					putchar(' ');
 				}
-
 				for (int j = 0; j < strlen(param); j++)
 				{
 					putchar(swap_case_sesnsitivity(param[j]));
