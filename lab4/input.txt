@@ -1,20 +1,20 @@
-totafsdfsf #k fdsfsdf
-test
-totafsd#k fdsfsdf fdfjs
-test2
+totafsdfsf #g fdsfsdf
+12
+totafsd#g fdsfsdf fdfjs
+13
 jfldjfldk # wynik
-test3
-fjdfsfds # k alal
-test4
-djfjkldsjf #k jjjjjj fsfjdljfdlsj flj ldfj
-test5
-gjjkdsljflds #k jdlkfjdslf
-test6
-fjdslkfjdl #k tttttt
-test7
-fjdlsjfkl #k oooolll
-test8
-rwrewrew #k fjdslkjfdl
-test9
-fjdlskjfldjflj #k rewrewrew
-test10
+14
+fjdfsfds # g alal
+15
+djfjkldsjf #g jjjjjj fsfjdljfdlsj flj ldfj
+16
+gjjkdsljflds #g jdlkfjdslf
+17
+fjdslkfjdl #g tttttt
+18
+fjdlsjfkl #g oooolll
+19
+rwrewrew #g fjdslkjfdl
+s
+fjdlskjfldjflj #g rewrewrew
+21
