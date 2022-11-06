@@ -3,13 +3,15 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-void revers_string(char *string)  {
-    int len = strlen(string);
-    for (int i = 0; i < len/2; i++) {
-        char temp = string[i];
-        string[i] = string[len - i - 1];
-        string[len - i - 1] = temp;
-    }
+void revers_string(char *string)
+{
+	int len = strlen(string);
+	for (int i = 0; i < len / 2; i++)
+	{
+		char temp = string[i];
+		string[i] = string[len - i - 1];
+		string[len - i - 1] = temp;
+	}
 }
 
 int my_printf(char *format_string, char *param)
@@ -21,14 +23,10 @@ int my_printf(char *format_string, char *param)
 			i++;
 			int j;
 			for (j = 0; j < strlen(param); j++)
-			{
 				if (!isdigit(param[j]))
-				{
 					break;
-				}
-			}
 
-			if (j<strlen(param))
+			if (j < strlen(param))
 			{
 				puts("");
 				return -1;
