@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 int my_printf(char *format_string, char *param)
 {
@@ -9,17 +10,16 @@ int my_printf(char *format_string, char *param)
 		if ((format_string[i] == '#') && (format_string[i + 1] == 'g'))
 		{
 			i++;
-			int len = 0;
-			for (int j = 0; j < strlen(param); j++)
+			int j;
+			for (j = 0; j < strlen(param); j++)
 			{
 				if (!isdigit(param[j]))
 				{
-					len = j;
 					break;
 				}
 			}
-			
-			if (len)
+
+			if (j<strlen(param))
 			{
 				puts("");
 				return -1;
