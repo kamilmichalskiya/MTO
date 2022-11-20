@@ -7,66 +7,102 @@ int my_printf(char *format_string, char *param)
 {
 	for (int i = 0; i < strlen(format_string); i++)
 	{
-		if ((format_string[i] == '#') && (format_string[i + 1] == 'X') && (format_string[i + 2] == 'g'))
+		if (format_string[i] == '#')
 		{
-			i += 2;
-			int j;
-			for (j = 0; j < strlen(param); j++)
+			int number_of_chars = 0;
+			for (int j = i + 1; j < strlen(format_string); ++j)
 			{
-				char c = param[j];
-				if (!isdigit(c))
+				if (j > i + 1 && format_string[j] == 'g')
+				{
+					number_of_chars = j - (i + 1);
+				}
+				else if (!isdigit(format_string[j]))
 				{
 					break;
 				}
-				else
-				{
-					switch (c)
-					{
-					case '0':
-						param[j] = '9';
-						break;
-					case '1':
-						param[j] = '0';
-						break;
-					case '2':
-						param[j] = '1';
-						break;
-					case '3':
-						param[j] = '2';
-						break;
-					case '4':
-						param[j] = '3';
-						break;
-					case '5':
-						param[j] = '4';
-						break;
-					case '6':
-						param[j] = '5';
-						break;
-					case '7':
-						param[j] = '6';
-						break;
-					case '8':
-						param[j] = '7';
-						break;
-					case '9':
-						param[j] = '8';
-						break;
-					default:
-						break;
-					}
-				}
 			}
-
-			if (j < strlen(param))
+			if (number_of_chars == 0)
 			{
-				puts("");
-				return -1;
+				putchar(format_string[i]);
 			}
 			else
 			{
-				printf("%s", param);
+				i += 1;
+				char number_in_chars[number_of_chars + 1];
+				memcpy(number_in_chars, &format_string[i], number_of_chars);
+				number_in_chars[number_of_chars] = '\0';
+				int num = atoi(number_in_chars);
+
+				for (int j = strlen(param); j < num; j++)
+				{
+					if (format_string[i] == '0')
+					{
+						putchar('9');
+					}
+					else
+					{
+					}
+					putchar(' ');
+				}
+				int k;
+				for (k = 0; k < strlen(param); k++)
+				{
+					char c = param[k];
+					if (!isdigit(c))
+					{
+						break;
+					}
+					else
+					{
+						switch (c)
+						{
+						case '0':
+							param[k] = '9';
+							break;
+						case '1':
+							param[k] = '0';
+							break;
+						case '2':
+							param[k] = '1';
+							break;
+						case '3':
+							param[k] = '2';
+							break;
+						case '4':
+							param[k] = '3';
+							break;
+						case '5':
+							param[k] = '4';
+							break;
+						case '6':
+							param[k] = '5';
+							break;
+						case '7':
+							param[k] = '6';
+							break;
+						case '8':
+							param[k] = '7';
+							break;
+						case '9':
+							param[k] = '8';
+							break;
+						default:
+							break;
+						}
+					}
+				}
+
+				if (k < strlen(param))
+				{
+					puts("");
+					return -1;
+				}
+				else
+				{
+					printf("%s", param);
+				}
 			}
+			i += number_of_chars;
 		}
 		else
 			putchar(format_string[i]);
