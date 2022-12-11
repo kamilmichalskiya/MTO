@@ -32,7 +32,6 @@ int my_printf(char *format_string, char *param)
 					if (!isdigit(param[j]))
 					{
 						puts("");
-
 						return -1;
 					}
 				}
@@ -44,7 +43,6 @@ int my_printf(char *format_string, char *param)
 				for (int j = 0; j < strlen(param) && j < num; j++)
 				{
 					putchar(param[j]);
-					
 				}
 				i += number_of_chars;
 			}
