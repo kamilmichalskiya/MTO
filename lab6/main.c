@@ -27,6 +27,14 @@ int my_printf(char *format_string, char *param)
 			}
 			else
 			{
+				for (int j = 0; j < strlen(param); j++)
+				{
+					if (!isdigit(param[j]))
+					{
+						puts("");
+						return -1;
+					}
+				}
 				i += 2;
 				char number_in_chars[number_of_chars + 1];
 				memcpy(number_in_chars, &format_string[i], number_of_chars);
