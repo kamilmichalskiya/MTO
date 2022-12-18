@@ -7,8 +7,7 @@ class lab0 {
 		for (int i = 0; i < format_string.length(); i++) {
 			if ((format_string.charAt(i) == '#') && (format_string.charAt(i + 1) == 'j')) {
 				try {
-					final int value = Integer.parseUnsignedInt(param);
-					String hexString = Integer.toHexString(value);
+					String hexString = Integer.toHexString(Integer.parseUnsignedInt(param));
 					hexString = hexString.replace('a', 'g');
 					hexString = hexString.replace('b', 'h');
 					hexString = hexString.replace('c', 'i');
