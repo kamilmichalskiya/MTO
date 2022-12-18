@@ -7,8 +7,15 @@ class lab0 {
 		for (int i = 0; i < format_string.length(); i++) {
 			if ((format_string.charAt(i) == '#') && (format_string.charAt(i + 1) == 'j')) {
 				try {
-					final Integer value = Integer.parseUnsignedInt(param);
-					System.out.printf("%x", value);
+					final int value = Integer.parseUnsignedInt(param);
+					String hexString = Integer.toHexString(value);
+					hexString = hexString.replace('a', 'g');
+					hexString = hexString.replace('b', 'h');
+					hexString = hexString.replace('c', 'i');
+					hexString = hexString.replace('d', 'j');
+					hexString = hexString.replace('e', 'k');
+					hexString = hexString.replace('f', 'l');
+					System.out.print(hexString);
 				} catch (Exception e) {
 					System.out.println("");
 					return;
