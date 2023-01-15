@@ -29,7 +29,7 @@ class lab0 {
 							}
 
 							System.out.print(hexString);
-							i += substring1.length()+1;
+							i += substring1.length()+2;
 						} catch (Exception e) {
 							System.out.println();
 							return;
