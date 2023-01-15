@@ -40,7 +40,6 @@ class lab0 {
 				} else {
 					System.out.print(format_string.charAt(i));
 				}
-				i++;
 			} else {
 				System.out.print(format_string.charAt(i));
 			}
