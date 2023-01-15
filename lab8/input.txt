@@ -1,28 +1,28 @@
-totafsdfsf #j fdsfsdf
+totafsdfsf #.2j fdsfsdf
 12
-totafsd#j fdsfsdf fdfjs
+totafsd#.2j fdsfsdf fdfjs
 13.1
-jfldjfldj # wynij
+jfldjfldj #.2 wynij
 2
-fjdfsfds # j alal
+fjdfsfds #.2 j alal
 2
-djfjjldsjf #j jjjjjj fsfjdljfdlsj flj ldfj
+djfjjldsjf #.2j jjjjjj fsfjdljfdlsj flj ldfj
 -2
-gjjjdsljflds #j jdljfjdslf
+gjjjdsljflds #.2j jdljfjdslf
 a3
-fjdsljfjdl #j tttttt
+fjdsljfjdl #.2j tttttt
 3a
-fjdlsjfjl #j oooolll
+fjdlsjfjl #.2j oooolll
 55
-rwrewrew #j fjdsljjfdl
+rwrewrew #.3j fjdsljjfdl
 10
-fjdlsjjfldjflj #j rewrewrew
+fjdlsjjfldjflj #.1j rewrewrew
 11
-fjdlsjjfldjflj #j rewrewrew
+fjdlsjjfldjflj #.2j rewrewrew
 12
-fjdlsjjfldjflj #j rewrewrew
+fjdlsjjfldjflj #.5j rewrewrew
 13
-fjdlsjjfldjflj #j rewrewrew
+fjdlsjjfldjflj #.6j rewrewrew
 14
-fjdlsjjfldjflj #j rewrewrew
+fjdlsjjfldjflj #.7j rewrewrew
 15
