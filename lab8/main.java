@@ -13,17 +13,18 @@ class lab0 {
 					if (substring1.matches("\\d+")) {
 						final int parseInt = Integer.parseInt(substring1);
 						try {
-							String hexString = Integer.toHexString(Integer.parseUnsignedInt(param));
-							hexString = hexString.replace('a', 'g');
-							hexString = hexString.replace('b', 'h');
-							hexString = hexString.replace('c', 'i');
-							hexString = hexString.replace('d', 'j');
-							hexString = hexString.replace('e', 'k');
-							hexString = hexString.replace('f', 'l');
-							hexString = hexString.replace('0', 'o');
-							if (hexString.length() < parseInt) {
-								for (int j = 0; j <= parseInt - hexString.length(); j++) {
-									hexString = "o" + hexString;
+							StringBuilder hexString = new StringBuilder(Integer.toHexString(Integer.parseUnsignedInt(param)));
+							hexString = new StringBuilder(hexString.toString().replace('a', 'g'));
+							hexString = new StringBuilder(hexString.toString().replace('b', 'h'));
+							hexString = new StringBuilder(hexString.toString().replace('c', 'i'));
+							hexString = new StringBuilder(hexString.toString().replace('d', 'j'));
+							hexString = new StringBuilder(hexString.toString().replace('e', 'k'));
+							hexString = new StringBuilder(hexString.toString().replace('f', 'l'));
+							hexString = new StringBuilder(hexString.toString().replace('0', 'o'));
+							final int length = hexString.length();
+							if (length < parseInt) {
+								for (int j = 0; j < parseInt - length; j++) {
+									hexString.insert(0, "o");
 								}
 							}
 
